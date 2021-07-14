@@ -4,7 +4,8 @@ import csv
 
 #read csv path
 csvpath =  'Resources/budget_data.csv'
-#csvpath = os.path.join("Resources", "cereal.csv")
+#csvpath = os.path.join(".","Resources","budget_data.csv")
+         
 
 # Intilize variables
 month = []
@@ -48,21 +49,22 @@ print (f'Greatest Increase in Profits: {month_greatest_increase} (${greatest_inc
 print (f'Greatest Decrease in Profits: {month_greatest_decrease} (${greatest_decrease})')
 
 #Write File
-output_path = os.path.join(".","output.txt")
-with open(output_path, 'w', newline='') as csvwriter:
-    csvwriter.write("Financial Analysis")
-    csvwriter.write("\n")
-    csvwriter.write("------------------------")
-    csvwriter.write("\n")
-    csvwriter.write(f'Total Months: {total_months}')
-    csvwriter.write("\n")
-    csvwriter.write(f'Total: ${total}')
-    csvwriter.write("\n")
-    csvwriter.write(f'Average  Change: ${average_change}')
-    csvwriter.write("\n")
-    csvwriter.write(f'Greatest Increase in Profits: {month_greatest_increase} (${greatest_increase})')
-    csvwriter.write("\n")
-    csvwriter.write(f'Greatest Decrease in Profits: {month_greatest_decrease} (${greatest_decrease})')
+#output_path = os.path.join(".","output.txt")
+output_path = os.path.join(".","analysis","AnalysisReport_PyBank.txt")
+with open(output_path, 'w', newline='') as Txtwriter:
+    Txtwriter.write("Financial Analysis")
+    Txtwriter.write("\n")
+    Txtwriter.write("------------------------")
+    Txtwriter.write("\n")
+    Txtwriter.write(f'Total Months: {total_months}')
+    Txtwriter.write("\n")
+    Txtwriter.write(f'Total: ${total}')
+    Txtwriter.write("\n")
+    Txtwriter.write(f'Average  Change: ${average_change}')
+    Txtwriter.write("\n")
+    Txtwriter.write(f'Greatest Increase in Profits: {month_greatest_increase} (${greatest_increase})')
+    Txtwriter.write("\n")
+    Txtwriter.write(f'Greatest Decrease in Profits: {month_greatest_decrease} (${greatest_decrease})')
 
 
 
