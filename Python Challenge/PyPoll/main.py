@@ -61,6 +61,7 @@ with open(output_path, 'w', newline='') as Txtwriter:
   Txtwriter.write(f'Total Votes:  {total_votes}')
   Txtwriter.write("\n")
   Txtwriter.write("------------------------")
+  Txtwriter.write("\n")
   for i in range(len(candidate)):
        Txtwriter.write(f"{candidate[i]}: {str(percentage_votes[i])} ({str(candidate_votes[i])})")
        Txtwriter.write("\n")
